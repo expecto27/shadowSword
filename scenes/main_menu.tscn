@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsp7nkvv37v8o"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_0ktx8"]
+
+[node name="mainMenu" type="Node2D"]
+script = ExtResource("1_0ktx8")
+
+[node name="settingBtn" type="Button" parent="."]
+offset_left = 453.0
+offset_top = 282.0
+offset_right = 699.0
+offset_bottom = 340.0
+text = "SETTING"
+
+[node name="exitBtn" type="Button" parent="."]
+offset_left = 454.0
+offset_top = 356.0
+offset_right = 700.0
+offset_bottom = 414.0
+text = "EXIT"
+
+[node name="playBtn" type="Button" parent="."]
+offset_left = 452.0
+offset_top = 212.0
+offset_right = 698.0
+offset_bottom = 270.0
+text = "PLAY"
