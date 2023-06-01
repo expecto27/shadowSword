@@ -1,0 +1,26 @@
+2a60927148abd1d33b818b535e306557
+::res://::1685592662
+icon.svg::CompressedTexture2D::6754561594957786525::1685590439::1685590670::1::::<><>::
+::res://assets/::1685590439
+::res://assets/skins/::1685590670
+f4-blacksolusgg.png::CompressedTexture2D::7699967154146174417::1685590439::1685590670::1::::<><>::
+f4_blacksolus.png::CompressedTexture2D::1203800109997978362::1685590439::1685590670::1::::<><>::
+::res://button/::1685554016
+::res://button/1x/::1685594672
+Ресурс 1.png::CompressedTexture2D::3113942961922437607::1685587267::1685590670::1::::<><>::
+::res://button/1x/0.5x/::1685594693
+Ресурс 3@0.5x.png::CompressedTexture2D::662759130985335934::1685594419::1685594425::1::::<><>::
+::res://button/1x/0.5x/0.5x/::1685594693
+Ресурс 4@0.5x.png::CompressedTexture2D::936743742142986444::1685594693::1685594698::1::::<><>::
+::res://button/1x/1x/::1685590670
+Ресурс 2.png::CompressedTexture2D::5101976403546412238::1685587524::1685590670::1::::<><>::
+::res://scenes/::1685594583
+f4gg.tscn::PackedScene::3683285779516900375::1685594583::0::1::::<><>::res://scripts/f4gg.gd<>uid://dhx6lmfqm82r2
+lvl1.tscn::PackedScene::3069588754400780332::1685594583::0::1::::<><>::uid://ca4wddubqml7v<>uid://djwuxpetu4klq<>uid://bsqhgcr2tx85p
+main_menu.tscn::PackedScene::8455593620631311844::1685594583::0::1::::<><>::res://scripts/main_menu.gd<>uid://bkmogkuagnosd<>uid://jpbstihvw0q1
+::res://scripts/::1685594272
+main_menu.gd::GDScript::-1::1685591844::0::1::::<>Node2D<>::
+f4gg.gd::GDScript::-1::1685594272::0::1::::<>Node2D<>::
+::res://Tilemap/::1685590670
+tilemap.png::CompressedTexture2D::4834049642009953537::1685551842::1685590670::1::::<><>::
+tilemap_packed.png::CompressedTexture2D::7837634162446672950::1685551842::1685590670::1::::<><>::

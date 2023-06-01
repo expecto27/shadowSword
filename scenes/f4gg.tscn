@@ -1,22 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://bsqhgcr2tx85p"]
+[gd_scene load_steps=4 format=3 uid="uid://bsqhgcr2tx85p"]
 
+[ext_resource type="Script" path="res://scripts/f4gg.gd" id="1_478u5"]
 [ext_resource type="Texture2D" uid="uid://dhx6lmfqm82r2" path="res://assets/skins/f4-blacksolusgg.png" id="1_gt4c8"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4hqs4"]
-radius = 11.0
-height = 46.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5molf"]
+height = 42.0
 
 [node name="Node2D" type="Node2D"]
-position = Vector2(506, 502)
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-472.25, -463)
-scale = Vector2(1.00746, 1)
-texture = ExtResource("1_gt4c8")
+script = ExtResource("1_478u5")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(-506, -502)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(35, 48)
-shape = SubResource("CapsuleShape2D_4hqs4")
+position = Vector2(2, 7)
+shape = SubResource("CapsuleShape2D_5molf")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(3.8147e-06, 0)
+texture = ExtResource("1_gt4c8")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+zoom = Vector2(5, 5)
