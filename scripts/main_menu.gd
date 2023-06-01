@@ -16,5 +16,4 @@ func _exitBtnPressed():
 
 
 func _playBtnPressed():
-	print(123)
 	get_tree().change_scene_to_file('scenes/lvl1.tscn')

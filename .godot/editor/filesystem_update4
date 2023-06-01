@@ -1,5 +1,10 @@
-res://scenes/main_menu.tscn
 res://scenes/lvl1.tscn
+res://scenes/main_menu.tscn
 res://scenes/f4gg.tscn
-res://scripts/main_menu.gd
 res://scripts/f4gg.gd
+res://scenes/house_1.tscn
+res://scripts/cucumber.gd
+res://scenes/cucumber.tscn
+res://scripts/main_menu.gd
+res://scripts/Chebupel.gd
+res://scenes/chebupel.tscn
