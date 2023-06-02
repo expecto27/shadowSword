@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://6k885icp8ynj"]
+
+[ext_resource type="Script" path="res://scripts/woman.gd" id="1_6iu80"]
+[ext_resource type="Texture2D" uid="uid://jhurpw2rme4h" path="res://assets/skins/middle_age_b_woman_down_idle.png" id="1_8rclf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j66h0"]
+size = Vector2(15, 26)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_6iu80")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(7.75, 14.1463)
+scale = Vector2(0.353659, 0.353659)
+texture = ExtResource("1_8rclf")
+
+[node name="StandingTimer" type="Timer" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(7.5, 13)
+shape = SubResource("RectangleShape2D_j66h0")
+
+[connection signal="timeout" from="StandingTimer" to="." method="_on_standing_timer_timeout"]
