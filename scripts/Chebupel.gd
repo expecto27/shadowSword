@@ -51,8 +51,6 @@ func _process(delta):
 	else:
 		play_anim(0)
 	move_and_slide()
-	position.x = clamp(position.x, 0, 10000)
-	position.y = clamp(position.y, 0, 10000)
 	
 	
 func play_anim(movement):
