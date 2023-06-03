@@ -443,5 +443,17 @@ platform_on_leave = 2
 platform_floor_layers = 1
 platform_wall_layers = 8
 
+[node name="CharacterBody2D2" parent="." instance=ExtResource("5_80ohd")]
+position = Vector2(356, 278)
+
+[node name="CharacterBody2D4" parent="." instance=ExtResource("5_80ohd")]
+position = Vector2(170, 342)
+
+[node name="CharacterBody2D5" parent="." instance=ExtResource("5_80ohd")]
+position = Vector2(656, 293)
+
+[node name="CharacterBody2D3" parent="." instance=ExtResource("5_80ohd")]
+position = Vector2(274, 230)
+
 [node name="CharacterBody2D" parent="." instance=ExtResource("5_80ohd")]
-position = Vector2(439, 359)
+position = Vector2(375, 355)
