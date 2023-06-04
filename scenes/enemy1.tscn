@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://d21v5ovtl8ww1"]
+
+[ext_resource type="Texture2D" uid="uid://dhx6lmfqm82r2" path="res://assets/skins/f4-blacksolusgg.png" id="1_1efep"]
+[ext_resource type="Script" path="res://scripts/enemy1.gd" id="1_nqq4k"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vyn5t"]
+radius = 17.0
+height = 54.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_nqq4k")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(33, 38)
+texture = ExtResource("1_1efep")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(36, 46)
+shape = SubResource("CapsuleShape2D_vyn5t")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -2,7 +2,6 @@ extends Node2D
 # home = 558 575
 var mainCharacter
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	mainCharacter = get_node("Chebupel")
 

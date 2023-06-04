@@ -3,15 +3,15 @@ extends CharacterBody2D
 @onready var _animation_player = $AnimationPlayer
 var cur_dir = "none"
 
+var hp = 100
+var max_hp = 100
 var capacity = 2
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
-	pass # Replace with function body.
+	setStartHp(hp, max_hp)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	
 	if Input.is_action_pressed("left") and Input.is_action_pressed('up'):
 		cur_dir = "left"
 		play_anim(1)
@@ -51,7 +51,7 @@ func _process(delta):
 	else:
 		play_anim(0)
 	move_and_slide()
-	
+	updateHp()
 	
 func play_anim(movement):
 	var dir = cur_dir
@@ -84,3 +84,13 @@ func play_anim(movement):
 		elif movement == 0:
 			_animation_player.play("Idle_up")
 
+func setStartHp(hp, max_hp):
+	$TextureProgressBar.max_value = max_hp
+	$TextureProgressBar.value = hp
+	
+func updateHp():
+	$TextureProgressBar.value = hp
+
+func reduceHp(val):
+	self.hp -= val
+	updateHp()
