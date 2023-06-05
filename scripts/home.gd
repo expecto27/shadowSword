@@ -1,14 +1,29 @@
 extends Node2D
 
-var mainCharacter
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	mainCharacter = get_node("Chebupel")
+	Global.finish_change_scene()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	var x = int(mainCharacter.position.x)
-	var y = int(mainCharacter.position.y)
-	print(x, y)
-	if x > 400 and x < 450 and y > 409 and y < 422:
-		get_tree().change_scene_to_file('scenes/lvl1.tscn')
+	change_scene()
+
+
+func _on_exit_body_entered(body):
+	if body.has_method("player"):
+		Global.transtion_scene = true
+		Global.player_home = true
+	print(Global.scene)
+	print(Global.transtion_scene)
+
+func change_scene():
+	if Global.transtion_scene == true:
+		if Global.scene == "home":
+			get_tree().change_scene_to_file("res://scenes/lvl1.tscn")
+			Global.finish_change_scene()
+
+
+func _on_exit_body_exited(body):
+	if body.has_method("player"):
+		Global.transtion_scene = false

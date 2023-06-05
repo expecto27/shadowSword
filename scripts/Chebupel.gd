@@ -1,17 +1,33 @@
 extends CharacterBody2D
 
-@onready var _animation_player = $AnimationPlayer
+@onready var anim = $AnimationPlayer
 var cur_dir = "none"
-
-var hp = 100
-var max_hp = 100
 var capacity = 2
 
+var enemy_attack_range = false
+var enemy_attack_cooldown = true
+var hp = 100
+var alive = true
+
+var attack_ip = false
+
+
 func _ready():
-	setStartHp(hp, max_hp)
+	pass
 
+func _physics_process(delta):
+	player_movement(delta)
+	enemy_attack()
+	attack()
+	update_hp()
+	
+	if hp <= 0:
+		alive = false
+		hp = 0
+		$AnimationPlayer.play("death")
+		self.queue_free()
 
-func _process(delta):
+func player_movement(delta):
 	if Input.is_action_pressed("left") and Input.is_action_pressed('up'):
 		cur_dir = "left"
 		play_anim(1)
@@ -50,8 +66,10 @@ func _process(delta):
 		self.position.x += capacity
 	else:
 		play_anim(0)
+		
 	move_and_slide()
-	updateHp()
+	
+	
 	
 func play_anim(movement):
 	var dir = cur_dir
@@ -59,38 +77,99 @@ func play_anim(movement):
 	if dir == "right":
 		get_node("plrig").set_flip_h(false)
 		if movement == 1:
-			_animation_player.play("w_r")
+			anim.play("w_r")
 		elif movement == 0:
-			_animation_player.play("Idle_r")
+			if attack_ip == false:
+				anim.play("Idle_r")
 	
 	if dir == "left":
 		get_node("plrig").set_flip_h(true)
 		if movement == 1:
-			_animation_player.play("w_r")
+			anim.play("w_r")
 		elif movement == 0:
-			_animation_player.play("Idle_r")
+			if attack_ip == false:
+				anim.play("Idle_r")
 
 	if dir == "down":
 		get_node("plrig").set_flip_h(false)
 		if movement == 1:
-			_animation_player.play("w_d")
+			anim.play("w_d")
 		elif movement == 0:
-			_animation_player.play("Idle")
+			if attack_ip == false:
+				anim.play("Idle")
 
 	if dir == "up":
 		get_node("plrig").set_flip_h(false)
 		if movement == 1:
-			_animation_player.play("w_u")
+			anim.play("w_u")
 		elif movement == 0:
-			_animation_player.play("Idle_up")
+			if attack_ip == false:
+				anim.play("Idle_up")
 
-func setStartHp(hp, max_hp):
-	$TextureProgressBar.max_value = max_hp
-	$TextureProgressBar.value = hp
+func player():
+	pass
+
+func _on_hit_box_body_entered(body):
+	if body.has_method("enemy"):
+		enemy_attack_range = true
+
+
+func _on_hit_box_body_exited(body):
+	if body.has_method("enemy"):
+		enemy_attack_range = false
+
+func enemy_attack():
+	if enemy_attack_range and enemy_attack_cooldown == true:
+		hp -= 5
+		enemy_attack_cooldown = false
+		$cooldown.start()
+		print(hp)
+
+
+func _on_cooldown_timeout():
+	enemy_attack_cooldown = true
+
+func attack():
+	var dir = cur_dir
+	if Input.is_action_just_pressed("attack"):
+		Global.player_cur_attack = true
+		attack_ip = true
+		if dir == "right":
+			get_node("plrig").set_flip_h(false)
+			anim.play("att_r")
+			$deal_att.start()
+		if dir == "left":
+			get_node("plrig").set_flip_h(true)
+			anim.play("att_r")
+			$deal_att.start()
+		if dir == "down":
+			get_node("plrig").set_flip_h(false)
+			anim.play("att_d")
+			$deal_att.start()
+		if dir == "up":
+			get_node("plrig").set_flip_h(false)
+			anim.play("att_u")
+			$deal_att.start()
+
+func _on_deal_att_timeout():
+	$deal_att.stop()
+	Global.player_cur_attack = false
+	attack_ip = false
+
+func update_hp():
+	var hpbar = $healthbar
+	hpbar.value = hp 
 	
-func updateHp():
-	$TextureProgressBar.value = hp
+	if hp >= 100:
+		hpbar.visible = false
+	else:
+		hpbar.visible = true
 
-func reduceHp(val):
-	self.hp -= val
-	updateHp()
+
+func _on_regen_timeout():
+	if hp < 100:
+		hp += 10
+		if hp > 100:
+			hp = 100
+	if hp <= 0:
+		hp = 0
