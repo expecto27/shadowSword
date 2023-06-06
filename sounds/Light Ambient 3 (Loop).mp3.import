@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://6cd6ru8ckbm5"
+path="res://.godot/imported/Light Ambient 3 (Loop).mp3-975abe7b0e4062d0296cee10633db946.mp3str"
+
+[deps]
+
+source_file="res://sounds/Light Ambient 3 (Loop).mp3"
+dest_files=["res://.godot/imported/Light Ambient 3 (Loop).mp3-975abe7b0e4062d0296cee10633db946.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

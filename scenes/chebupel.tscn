@@ -1,8 +1,10 @@
-[gd_scene load_steps=20 format=3 uid="uid://demd3q6700pwb"]
+[gd_scene load_steps=22 format=3 uid="uid://demd3q6700pwb"]
 
 [ext_resource type="Script" path="res://scripts/Chebupel.gd" id="1_1n012"]
 [ext_resource type="Texture2D" uid="uid://b5lb5c3tv8hhw" path="res://button/sprites/characters/player.png" id="2_52uyb"]
 [ext_resource type="Texture2D" uid="uid://b0apejjnm08ls" path="res://assets/hp/SeekPng.com_health-bar-png_1087967.png" id="3_ueh5m"]
+[ext_resource type="AudioStream" uid="uid://dt7lkxvylgycy" path="res://sounds/slash-21834.mp3" id="4_5441q"]
+[ext_resource type="AudioStream" uid="uid://bojnfvybex8l7" path="res://sounds/Sound_17948400 1634388100.mp3" id="5_iwjt3"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sg35c"]
 radius = 6.0
@@ -331,6 +333,12 @@ show_percentage = false
 [node name="regen" type="Timer" parent="."]
 wait_time = 5.0
 autostart = true
+
+[node name="swordslash" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_5441q")
+
+[node name="damage" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_iwjt3")
 
 [connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]
 [connection signal="body_exited" from="HitBox" to="." method="_on_hit_box_body_exited"]

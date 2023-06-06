@@ -36,6 +36,7 @@ icon = ExtResource("3_elb8u")
 flat = true
 
 [node name="exitBtn" type="Button" parent="."]
+process_mode = 3
 offset_left = 691.0
 offset_top = 503.0
 offset_right = 765.0
@@ -44,6 +45,7 @@ icon = ExtResource("4_shc1f")
 flat = true
 
 [node name="playBtn" type="Button" parent="."]
+process_mode = 3
 offset_left = 463.0
 offset_top = 200.0
 offset_right = 697.0
@@ -52,4 +54,8 @@ icon = ExtResource("3_5d4q8")
 flat = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
+process_mode = 3
 position = Vector2(570, 331)
+
+[connection signal="pressed" from="exitBtn" to="." method="_on_exit_btn_pressed"]
+[connection signal="pressed" from="playBtn" to="." method="_on_play_btn_pressed"]

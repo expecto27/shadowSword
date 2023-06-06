@@ -1,19 +1,15 @@
 extends Node2D
 
 func _ready():
-	var exit = get_node("exitBtn")
-	var play = get_node("playBtn")
-	exit.connect("pressed", _exitBtnPressed)
-	play.connect("pressed", _playBtnPressed)
-
+	pass
 
 func _process(delta):
 	pass
 
 
-func _exitBtnPressed():
+func _on_exit_btn_pressed():
 	get_tree().quit()
 
 
-func _playBtnPressed():
+func _on_play_btn_pressed():
 	get_tree().change_scene_to_file('scenes/lvl1.tscn')

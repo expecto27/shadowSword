@@ -7,7 +7,6 @@ var capacity = 2
 var enemy_attack_range = false
 var enemy_attack_cooldown = true
 var hp = 100
-var alive = true
 
 var attack_ip = false
 
@@ -22,7 +21,7 @@ func _physics_process(delta):
 	update_hp()
 	
 	if hp <= 0:
-		alive = false
+		Global.alive_player = false
 		hp = 0
 		$AnimationPlayer.play("death")
 		self.queue_free()
@@ -120,6 +119,8 @@ func _on_hit_box_body_exited(body):
 
 func enemy_attack():
 	if enemy_attack_range and enemy_attack_cooldown == true:
+		$damage.playing = true
+		$plrig.modulate = Color(1,0,0,1)
 		hp -= 5
 		enemy_attack_cooldown = false
 		$cooldown.start()
@@ -128,6 +129,7 @@ func enemy_attack():
 
 func _on_cooldown_timeout():
 	enemy_attack_cooldown = true
+	$plrig.modulate = Color(1,1,1,1)
 
 func attack():
 	var dir = cur_dir
@@ -138,18 +140,22 @@ func attack():
 			get_node("plrig").set_flip_h(false)
 			anim.play("att_r")
 			$deal_att.start()
+			$swordslash.playing = true
 		if dir == "left":
 			get_node("plrig").set_flip_h(true)
 			anim.play("att_r")
 			$deal_att.start()
+			$swordslash.playing = true
 		if dir == "down":
 			get_node("plrig").set_flip_h(false)
 			anim.play("att_d")
 			$deal_att.start()
+			$swordslash.playing = true
 		if dir == "up":
 			get_node("plrig").set_flip_h(false)
 			anim.play("att_u")
 			$deal_att.start()
+			$swordslash.playing = true
 
 func _on_deal_att_timeout():
 	$deal_att.stop()
@@ -173,3 +179,4 @@ func _on_regen_timeout():
 			hp = 100
 	if hp <= 0:
 		hp = 0
+

@@ -1,0 +1,66 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4u20vbbr0qgh"]
+
+[ext_resource type="VideoStream" path="res://sounds/Новый проект.ogv" id="1_7x85w"]
+[ext_resource type="Script" path="res://scripts/deathmeny.gd" id="1_rjpb1"]
+
+[node name="Control" type="Control"]
+process_mode = 3
+visible = false
+top_level = true
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rjpb1")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+top_level = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+top_level = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -986.0
+offset_top = -559.0
+offset_right = 934.0
+offset_bottom = 529.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_7x85w")
+autoplay = true
+paused = true
+
+[node name="Button" type="Button" parent="."]
+top_level = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -111.0
+offset_top = -127.0
+offset_right = -7.0
+offset_bottom = -96.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(2, 2)
+text = "MAIN MENU"
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

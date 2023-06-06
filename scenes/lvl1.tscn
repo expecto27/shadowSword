@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bjy6xcenl3blc"]
+[gd_scene load_steps=13 format=3 uid="uid://bjy6xcenl3blc"]
 
 [ext_resource type="Script" path="res://scripts/lvl1.gd" id="1_06eld"]
 [ext_resource type="Texture2D" uid="uid://ca4wddubqml7v" path="res://Tilemap/tilemap.png" id="1_lxvg5"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://demd3q6700pwb" path="res://scenes/chebupel.tscn" id="4_nkn42"]
 [ext_resource type="PackedScene" uid="uid://6k885icp8ynj" path="res://scenes/woman.tscn" id="5_80ohd"]
 [ext_resource type="PackedScene" uid="uid://cxsy8inhl10r" path="res://scenes/slime.tscn" id="6_gaw42"]
+[ext_resource type="PackedScene" uid="uid://b4u20vbbr0qgh" path="res://scenes/deathmeny.tscn" id="7_38k4t"]
+[ext_resource type="PackedScene" uid="uid://bbyv5y6bfhdye" path="res://scenes/pausemenu.tscn" id="8_bvpnu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cyv0j"]
 texture = ExtResource("1_lxvg5")
@@ -420,6 +422,8 @@ position = Vector2(1, 1)
 script = ExtResource("1_06eld")
 metadata/_edit_vertical_guides_ = []
 
+[node name="Control" parent="." instance=ExtResource("7_38k4t")]
+
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_3g4tn")
 format = 2
@@ -447,6 +451,9 @@ motion_mode = 1
 platform_on_leave = 2
 platform_floor_layers = 1
 platform_wall_layers = 8
+
+[node name="pausemenu" parent="Chebupel" instance=ExtResource("8_bvpnu")]
+visible = false
 
 [node name="CharacterBody2D2" parent="." instance=ExtResource("5_80ohd")]
 position = Vector2(356, 278)

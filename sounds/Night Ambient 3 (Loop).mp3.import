@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cl13qch5tvamq"
+path="res://.godot/imported/Night Ambient 3 (Loop).mp3-ed65678af7ab2e79f11233448136d835.mp3str"
+
+[deps]
+
+source_file="res://sounds/Night Ambient 3 (Loop).mp3"
+dest_files=["res://.godot/imported/Night Ambient 3 (Loop).mp3-ed65678af7ab2e79f11233448136d835.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

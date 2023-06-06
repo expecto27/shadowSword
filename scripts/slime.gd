@@ -9,6 +9,7 @@ var player_attack_zone = false
 var take_damage_cool = true
 var anim_det = true
 
+
 func _physics_process(delta):
 	deal_damage()
 	update_hp()
@@ -26,11 +27,14 @@ func _physics_process(delta):
 
 func _on_detect_body_entered(body):
 	chebupel = body
+	$slimejump.playing = true
+	$son.start()
 	chebupel_chase = true
 
 
 func _on_detect_body_exited(body):
 	chebupel = null
+	$son.stop()
 	chebupel_chase = false
 
 func enemy():
@@ -48,6 +52,7 @@ func _on_hit_box_body_exited(body):
 func deal_damage():
 	if player_attack_zone and Global.player_cur_attack == true:
 		if take_damage_cool == true:
+			$AnimatedSprite2D.modulate = Color(1,0,0,1)
 			hp -= 10
 			$cooldown.start()
 			take_damage_cool = false
@@ -59,6 +64,7 @@ func deal_damage():
 
 func _on_cooldown_timeout():
 	take_damage_cool = true
+	$AnimatedSprite2D.modulate = Color(1,1,1,1)
 
 func update_hp():
 	var hpbar = $healthbar
@@ -68,3 +74,7 @@ func update_hp():
 		hpbar.visible = false
 	else:
 		hpbar.visible = true
+
+
+func _on_son_timeout():
+	$slimejump.playing = true

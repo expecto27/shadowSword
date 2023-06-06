@@ -1,0 +1,79 @@
+[gd_scene load_steps=26 format=3 uid="uid://hq5cnwwqxeol"]
+
+[ext_resource type="AudioStream" uid="uid://bai7ct6tqeke7" path="res://sounds/Action 1 (Loop).mp3" id="1_dqvbo"]
+[ext_resource type="AudioStream" uid="uid://c07hd2geq3rgt" path="res://sounds/Action 2 (Loop).mp3" id="2_ovj53"]
+[ext_resource type="AudioStream" uid="uid://clb1iiyvuoc0t" path="res://sounds/Ambient 6.mp3" id="3_j3cgp"]
+[ext_resource type="AudioStream" uid="uid://66qnv77xs3vj" path="res://sounds/Ambient 7.mp3" id="4_2ida1"]
+[ext_resource type="AudioStream" uid="uid://byig28w1i3pql" path="res://sounds/Ambient 8.mp3" id="5_h7a5m"]
+[ext_resource type="AudioStream" uid="uid://bdyxhdhys7drb" path="res://sounds/Ambient 9.mp3" id="6_q16dq"]
+[ext_resource type="AudioStream" uid="uid://bnqjwuydg2yo3" path="res://sounds/Ambient 10 .mp3" id="7_j0yxm"]
+[ext_resource type="AudioStream" uid="uid://bvfleo0uu34it" path="res://sounds/Light Ambient 1 (Loop).mp3" id="8_vra4e"]
+[ext_resource type="AudioStream" uid="uid://b1fujqslpta7o" path="res://sounds/Light Ambient 2 (Loop).mp3" id="9_50s2i"]
+[ext_resource type="AudioStream" uid="uid://6cd6ru8ckbm5" path="res://sounds/Light Ambient 3 (Loop).mp3" id="10_26o2o"]
+[ext_resource type="AudioStream" uid="uid://b3ew57qgenquk" path="res://sounds/Light Ambient 4 (Loop).mp3" id="11_3hp0x"]
+[ext_resource type="AudioStream" uid="uid://dfvxuafqquu0j" path="res://sounds/Light Ambient 5 (Loop).mp3" id="12_g2vll"]
+[ext_resource type="AudioStream" uid="uid://c6oyej7a24tju" path="res://sounds/Action 3 (Loop).mp3" id="13_qkx7m"]
+[ext_resource type="AudioStream" uid="uid://d32n2piuiknma" path="res://sounds/Night Ambient 1.mp3" id="14_puss5"]
+[ext_resource type="AudioStream" uid="uid://54k4hubs84ia" path="res://sounds/Night Ambient 2 (Loop).mp3" id="15_ekvi4"]
+[ext_resource type="AudioStream" uid="uid://cl13qch5tvamq" path="res://sounds/Night Ambient 3 (Loop).mp3" id="16_qr7tk"]
+[ext_resource type="AudioStream" uid="uid://bgvwt1pbq0qc4" path="res://sounds/Action 4 (Loop).mp3" id="17_lpgt6"]
+[ext_resource type="AudioStream" uid="uid://ctksoabo0p3jf" path="res://sounds/Action 5 (Loop).mp3" id="18_ys8p3"]
+[ext_resource type="AudioStream" uid="uid://iuo5wpdexu45" path="res://sounds/Ambient 1.mp3" id="19_78bt4"]
+[ext_resource type="AudioStream" uid="uid://cpubdynk0vfxg" path="res://sounds/Ambient 2.mp3" id="20_o1qkj"]
+[ext_resource type="AudioStream" uid="uid://l5damcutyyes" path="res://sounds/Ambient 3.mp3" id="21_qe8gl"]
+[ext_resource type="AudioStream" uid="uid://o6nnjcgorlp5" path="res://sounds/Ambient 4.mp3" id="22_i4r0h"]
+[ext_resource type="AudioStream" uid="uid://beg6ncnceaip0" path="res://sounds/Ambient 5.mp3" id="23_jrint"]
+[ext_resource type="Script" path="res://scripts/music.gd" id="24_6323p"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ucowh"]
+streams_count = 23
+stream_0/stream = ExtResource("1_dqvbo")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("2_ovj53")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("13_qkx7m")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("17_lpgt6")
+stream_3/weight = 1.0
+stream_4/stream = ExtResource("18_ys8p3")
+stream_4/weight = 1.0
+stream_5/stream = ExtResource("19_78bt4")
+stream_5/weight = 1.0
+stream_6/stream = ExtResource("20_o1qkj")
+stream_6/weight = 1.0
+stream_7/stream = ExtResource("21_qe8gl")
+stream_7/weight = 1.0
+stream_8/stream = ExtResource("22_i4r0h")
+stream_8/weight = 1.0
+stream_9/stream = ExtResource("23_jrint")
+stream_9/weight = 1.0
+stream_10/stream = ExtResource("3_j3cgp")
+stream_10/weight = 1.0
+stream_11/stream = ExtResource("4_2ida1")
+stream_11/weight = 1.0
+stream_12/stream = ExtResource("5_h7a5m")
+stream_12/weight = 1.0
+stream_13/stream = ExtResource("6_q16dq")
+stream_13/weight = 1.0
+stream_14/stream = ExtResource("7_j0yxm")
+stream_14/weight = 1.0
+stream_15/stream = ExtResource("8_vra4e")
+stream_15/weight = 1.0
+stream_16/stream = ExtResource("9_50s2i")
+stream_16/weight = 1.0
+stream_17/stream = ExtResource("10_26o2o")
+stream_17/weight = 1.0
+stream_18/stream = ExtResource("11_3hp0x")
+stream_18/weight = 1.0
+stream_19/stream = ExtResource("12_g2vll")
+stream_19/weight = 1.0
+stream_20/stream = ExtResource("14_puss5")
+stream_20/weight = 1.0
+stream_21/stream = ExtResource("15_ekvi4")
+stream_21/weight = 1.0
+stream_22/stream = ExtResource("16_qr7tk")
+stream_22/weight = 1.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+stream = SubResource("AudioStreamRandomizer_ucowh")
+script = ExtResource("24_6323p")

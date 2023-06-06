@@ -14,7 +14,14 @@ func _ready():
 		
 func _process(delta):
 	change_scene()
-
+	
+	
+	if Global.alive_player == false:
+		$Control.visible = true
+		$Control/VideoStreamPlayer.paused = false
+	elif Global.alive_player == true:
+		$Control.visible = false
+		$Control/VideoStreamPlayer.paused = true
 
 func _on_home_vhod_body_entered(body):
 	if body.has_method("player"):

@@ -1,5 +1,5 @@
 2a60927148abd1d33b818b535e306557
-::res://::1685992430
+::res://::1686083902
 icon.svg::CompressedTexture2D::6754561594957786525::1685971128::1685971370::1::::<><>::
 ::res://assets/::1685971128
 ::res://assets/hp/::1685971128
@@ -208,31 +208,65 @@ wooden.png::CompressedTexture2D::5524357077160821303::1685971128::1685971128::1:
 walls.png::CompressedTexture2D::5504399897897289478::1685971128::1685971128::1::::<><>::
 wooden_door.png::CompressedTexture2D::1910662342475339302::1685971128::1685971128::1::::<><>::
 wooden_door_b.png::CompressedTexture2D::1487717487977698395::1685971128::1685971128::1::::<><>::
-::res://scenes/::1685992385
-chebupel.tscn::PackedScene::7465023001638668353::1685992385::0::1::::<><>::res://scripts/Chebupel.gd<>uid://b5lb5c3tv8hhw<>uid://b0apejjnm08ls
+::res://scenes/::1686085703
+chebupel.tscn::PackedScene::7465023001638668353::1686085702::0::1::::<><>::res://scripts/Chebupel.gd<>uid://b5lb5c3tv8hhw<>uid://b0apejjnm08ls<>uid://dt7lkxvylgycy<>uid://bojnfvybex8l7
 enemy1.tscn::PackedScene::9109364050224065078::1685971481::0::1::::<><>::uid://dhx6lmfqm82r2<>res://scripts/enemy1.gd
 f4gg.tscn::PackedScene::3683285779516900375::1685971128::0::1::::<><>::res://scripts/f4gg.gd<>uid://dhx6lmfqm82r2
-home.tscn::PackedScene::7427732451361492416::1685992385::0::1::::<><>::res://scripts/home.gd<>uid://c614qn8u1r6nf<>uid://cxlyjl5qfjp5g<>uid://demd3q6700pwb
+home.tscn::PackedScene::7427732451361492416::1686085703::0::1::::<><>::res://scripts/home.gd<>uid://c614qn8u1r6nf<>uid://cxlyjl5qfjp5g<>uid://demd3q6700pwb
 house_1.tscn::PackedScene::5053901682911401715::1685971142::0::1::::<><>::uid://ca4wddubqml7v
-lvl1.tscn::PackedScene::3069588754400780332::1685992385::0::1::::<><>::res://scripts/lvl1.gd<>uid://ca4wddubqml7v<>uid://b7ckk2qal8tcb<>uid://demd3q6700pwb<>uid://6k885icp8ynj<>uid://cxsy8inhl10r
-main_menu.tscn::PackedScene::8455593620631311844::1685992385::0::1::::<><>::res://scripts/main_menu.gd<>uid://b7ckk2qal8tcb<>uid://bkmogkuagnosd<>uid://jpbstihvw0q1<>uid://nl1bdwivt4sm<>uid://bwo10k2mf516t
-pausemenu.tscn::PackedScene::2507484532595547560::1685992374::0::1::::<><>::res://scripts/pausemenu.gd
-slime.tscn::PackedScene::188995886772421683::1685992385::0::1::::<><>::uid://c2357kvox5mai<>res://scripts/slime.gd<>uid://b0apejjnm08ls
+lvl1.tscn::PackedScene::3069588754400780332::1686085702::0::1::::<><>::res://scripts/lvl1.gd<>uid://ca4wddubqml7v<>uid://b7ckk2qal8tcb<>uid://demd3q6700pwb<>uid://6k885icp8ynj<>uid://cxsy8inhl10r<>uid://b4u20vbbr0qgh<>uid://bbyv5y6bfhdye
+main_menu.tscn::PackedScene::8455593620631311844::1686085702::0::1::::<><>::res://scripts/main_menu.gd<>uid://b7ckk2qal8tcb<>uid://bkmogkuagnosd<>uid://jpbstihvw0q1<>uid://nl1bdwivt4sm<>uid://bwo10k2mf516t
+pausemenu.tscn::PackedScene::2507484532595547560::1686085703::0::1::::<><>::res://scripts/pausemenu.gd
+deathmeny.tscn::PackedScene::4464869812533864523::1686085703::0::1::::<><>::res://sounds/Новый проект.ogv<>res://scripts/deathmeny.gd
+music.tscn::PackedScene::526177748713105647::1686085703::0::1::::<><>::uid://bai7ct6tqeke7<>uid://c07hd2geq3rgt<>uid://clb1iiyvuoc0t<>uid://66qnv77xs3vj<>uid://byig28w1i3pql<>uid://bdyxhdhys7drb<>uid://bnqjwuydg2yo3<>uid://bvfleo0uu34it<>uid://b1fujqslpta7o<>uid://6cd6ru8ckbm5<>uid://b3ew57qgenquk<>uid://dfvxuafqquu0j<>uid://c6oyej7a24tju<>uid://d32n2piuiknma<>uid://54k4hubs84ia<>uid://cl13qch5tvamq<>uid://bgvwt1pbq0qc4<>uid://ctksoabo0p3jf<>uid://iuo5wpdexu45<>uid://cpubdynk0vfxg<>uid://l5damcutyyes<>uid://o6nnjcgorlp5<>uid://beg6ncnceaip0<>res://scripts/music.gd
+slime.tscn::PackedScene::188995886772421683::1686085702::0::1::::<><>::uid://c2357kvox5mai<>res://scripts/slime.gd<>uid://b0apejjnm08ls<>uid://der5ed12dk4nh
 woman.tscn::PackedScene::2198562110450937307::1685971128::0::1::::<><>::res://scripts/woman.gd<>uid://jhurpw2rme4h
-::res://scripts/::1685990989
-Chebupel.gd::GDScript::-1::1685989351::0::1::::<>CharacterBody2D<>::
+::res://scripts/::1686085702
+Chebupel.gd::GDScript::-1::1686085702::0::1::::<>CharacterBody2D<>::
 enemy1.gd::GDScript::-1::1685971128::0::1::::<>CharacterBody2D<>::
 f4gg.gd::GDScript::-1::1685971128::0::1::::<>Node2D<>::
-global.gd::GDScript::-1::1685978423::0::1::::<>Node<>::
+global.gd::GDScript::-1::1686082766::0::1::::<>Node<>::
 home.gd::GDScript::-1::1685978474::0::1::::<>Node2D<>::
-lvl1.gd::GDScript::-1::1685978549::0::1::::<>Node2D<>::
-main_menu.gd::GDScript::-1::1685971128::0::1::::<>Node2D<>::
-pausemenu.gd::GDScript::-1::1685990989::0::1::::<>Control<>::
-slime.gd::GDScript::-1::1685981042::0::1::::<>CharacterBody2D<>::
+lvl1.gd::GDScript::-1::1686084797::0::1::::<>Node2D<>::
+main_menu.gd::GDScript::-1::1686082825::0::1::::<>Node2D<>::
+pausemenu.gd::GDScript::-1::1686082914::0::1::::<>Control<>::
+deathmeny.gd::GDScript::-1::1686084797::0::1::::<>Control<>::
+music.gd::GDScript::-1::1686084173::0::1::::<>AudioStreamPlayer2D<>::
+slime.gd::GDScript::-1::1686070116::0::1::::<>CharacterBody2D<>::
 woman.gd::GDScript::-1::1685971128::0::1::::<>CharacterBody2D<>::
-::res://Tilemap/::1685984943
+::res://sounds/::1686085966
+Action 1 (Loop).mp3::AudioStreamMP3::2404883267799328912::1686081958::1686081970::1::::<><>::
+Action 2 (Loop).mp3::AudioStreamMP3::6594054350401528323::1686081958::1686081970::1::::<><>::
+Action 3 (Loop).mp3::AudioStreamMP3::6979061681905193386::1686081958::1686081970::1::::<><>::
+Action 4 (Loop).mp3::AudioStreamMP3::2852276771128593865::1686081958::1686081970::1::::<><>::
+Action 5 (Loop).mp3::AudioStreamMP3::6128191083248811055::1686081958::1686081970::1::::<><>::
+Ambient 1.mp3::AudioStreamMP3::603703094729681120::1686081958::1686081970::1::::<><>::
+Ambient 2.mp3::AudioStreamMP3::5867028932543820000::1686081958::1686081970::1::::<><>::
+Ambient 3.mp3::AudioStreamMP3::834191397923329514::1686081958::1686081970::1::::<><>::
+Ambient 4.mp3::AudioStreamMP3::1047452533626796912::1686081958::1686081970::1::::<><>::
+Ambient 5.mp3::AudioStreamMP3::2681467892091496951::1686081958::1686081970::1::::<><>::
+Ambient 6.mp3::AudioStreamMP3::5548576411565316541::1686081958::1686081970::1::::<><>::
+Ambient 7.mp3::AudioStreamMP3::2240845704269388227::1686081959::1686081970::1::::<><>::
+Ambient 8.mp3::AudioStreamMP3::4087882239879769479::1686081959::1686081970::1::::<><>::
+Ambient 9.mp3::AudioStreamMP3::2647941441595043119::1686081959::1686081970::1::::<><>::
+Ambient 10 .mp3::AudioStreamMP3::3332492523141006960::1686081959::1686081970::1::::<><>::
+attack-2-v.mp3::AudioStreamMP3::1205807504589167930::1686085948::1686085967::1::::<><>::
+Light Ambient 1 (Loop).mp3::AudioStreamMP3::3871384093841712631::1686081959::1686081970::1::::<><>::
+Light Ambient 2 (Loop).mp3::AudioStreamMP3::4222883787753379638::1686081959::1686081970::1::::<><>::
+Light Ambient 3 (Loop).mp3::AudioStreamMP3::2180221344171951690::1686081959::1686081970::1::::<><>::
+Light Ambient 4 (Loop).mp3::AudioStreamMP3::4361356869974819290::1686081959::1686081970::1::::<><>::
+Light Ambient 5 (Loop).mp3::AudioStreamMP3::7554990417289627275::1686081959::1686081970::1::::<><>::
+Night Ambient 1.mp3::AudioStreamMP3::9181126210773715228::1686081946::1686081970::1::::<><>::
+Night Ambient 2 (Loop).mp3::AudioStreamMP3::2166191620589971276::1686081947::1686081970::1::::<><>::
+Night Ambient 3 (Loop).mp3::AudioStreamMP3::5600321234759661952::1686081947::1686081970::1::::<><>::
+Running-footsteps-in-grass-www.fesliyanstudios.com.mp3::AudioStreamMP3::3495263355294154079::1686071128::1686071168::1::::<><>::
+slash-21834.mp3::AudioStreamMP3::8559597154774670940::1686067523::1686067533::1::::<><>::
+slimejump-6913.mp3::AudioStreamMP3::7476940699375220117::1686068013::1686068039::1::::<><>::
+Sound_17948400 1634388100.mp3::AudioStreamMP3::3388443284404963250::1686085586::1686085623::1::::<><>::
+Новый проект.ogv::VideoStreamTheora::-1::1686072815::0::1::::<><>::
+::res://Tilemap/::1686071279
 tilemap.png::CompressedTexture2D::4834049642009953537::1685971128::1685971128::1::::<><>::
 tilemap_packed.png::CompressedTexture2D::7837634162446672950::1685971128::1685971128::1::::<><>::
-tl1.tres::TileSet::4637218906348313801::1685984943::0::1::::<><>::uid://ca4wddubqml7v<>uid://djwuxpetu4klq<>uid://dkrqixvt671x6<>uid://cat17mdcxoiqh
+tl1.tres::TileSet::4637218906348313801::1686071279::0::1::::<><>::uid://ca4wddubqml7v<>uid://djwuxpetu4klq<>uid://dkrqixvt671x6<>uid://cat17mdcxoiqh
 TopDownHouse_FloorsAndWalls.png::CompressedTexture2D::7004159441989721251::1685971128::1685971128::1::::<><>::
 TopDownHouse_FurnitureState1.png::CompressedTexture2D::6411366831162148310::1685971128::1685971128::1::::<><>::

@@ -1,8 +1,9 @@
-[gd_scene load_steps=24 format=3 uid="uid://cxsy8inhl10r"]
+[gd_scene load_steps=28 format=3 uid="uid://cxsy8inhl10r"]
 
 [ext_resource type="Texture2D" uid="uid://c2357kvox5mai" path="res://button/sprites/characters/slime.png" id="1_dawsd"]
 [ext_resource type="Script" path="res://scripts/slime.gd" id="1_n6gq3"]
 [ext_resource type="Texture2D" uid="uid://b0apejjnm08ls" path="res://assets/hp/SeekPng.com_health-bar-png_1087967.png" id="3_q48yb"]
+[ext_resource type="AudioStream" uid="uid://der5ed12dk4nh" path="res://sounds/slimejump-6913.mp3" id="4_x6mde"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sau61"]
 atlas = ExtResource("1_dawsd")
@@ -19,6 +20,18 @@ region = Rect2(64, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_tpsk7"]
 atlas = ExtResource("1_dawsd")
 region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ryjdu"]
+atlas = ExtResource("1_dawsd")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nhtv3"]
+atlas = ExtResource("1_dawsd")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eined"]
+atlas = ExtResource("1_dawsd")
+region = Rect2(64, 96, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i51vx"]
 atlas = ExtResource("1_dawsd")
@@ -85,6 +98,20 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_ryjdu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nhtv3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eined")
+}],
+"loop": true,
+"name": &"damage",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_i51vx")
 }, {
 "duration": 1.0,
@@ -128,7 +155,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mmq4u"]
-radius = 45.0
+radius = 64.0078
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_52i5b"]
 radius = 4.12311
@@ -150,8 +177,7 @@ script = ExtResource("1_n6gq3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_l0pwi")
-animation = &"death"
-frame_progress = 0.896557
+animation = &"walk"
 offset = Vector2(0, -6)
 
 [node name="detect" type="Area2D" parent="."]
@@ -159,7 +185,6 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detect"]
-position = Vector2(0, 2)
 shape = SubResource("CircleShape2D_mmq4u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -187,8 +212,15 @@ theme_override_styles/background = SubResource("StyleBoxTexture_68q65")
 max_value = 70.0
 show_percentage = false
 
+[node name="slimejump" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_x6mde")
+
+[node name="son" type="Timer" parent="."]
+wait_time = 0.7
+
 [connection signal="body_entered" from="detect" to="." method="_on_detect_body_entered"]
 [connection signal="body_exited" from="detect" to="." method="_on_detect_body_exited"]
 [connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]
 [connection signal="body_exited" from="HitBox" to="." method="_on_hit_box_body_exited"]
 [connection signal="timeout" from="cooldown" to="." method="_on_cooldown_timeout"]
+[connection signal="timeout" from="son" to="." method="_on_son_timeout"]
