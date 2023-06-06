@@ -1,3 +1,6 @@
+CollisionShape2D
+AnimatedSprite2D
+CharacterBody2D
 AudioStreamPlayer2D
 Camera2D
 VideoStreamPlayer
@@ -6,7 +9,6 @@ Button
 VBoxContainer
 Panel
 Timer
-CollisionShape2D
 Area2D
 AudioStreamPlayer
 AudioListener2D
@@ -20,12 +22,10 @@ LightOccluder2D
 AnimationPlayer
 ProgressBar
 Sprite2D
-CharacterBody2D
 TextureProgressBar
 TextEdit
 RigidBody2D
 StaticBody2D
 AnimationTree
 AcceptDialog
-AnimatedSprite2D
 Node2D
