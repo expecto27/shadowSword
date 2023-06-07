@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @onready var anim = $AnimationPlayer
 var cur_dir = "none"
-var capacity = 2
+var speed = 2
 
 var enemy_attack_range = false
 var enemy_attack_cooldown = true
@@ -30,39 +30,39 @@ func player_movement(delta):
 	if Input.is_action_pressed("left") and Input.is_action_pressed('up'):
 		cur_dir = "left"
 		play_anim(1)
-		self.position.x -= capacity / 1.5
-		self.position.y -= capacity / 1.5
+		self.position.x -= speed / 1.5
+		self.position.y -= speed / 1.5
 	elif Input.is_action_pressed('left') and Input.is_action_pressed('down'):
 		cur_dir = "left"
 		play_anim(1)
-		self.position.x -= capacity / 1.5
-		self.position.y += capacity / 1.5
+		self.position.x -= speed / 1.5
+		self.position.y += speed / 1.5
 	elif Input.is_action_pressed("right") and Input.is_action_pressed('up'):
 		cur_dir = "right"
 		play_anim(1)
-		self.position.x += capacity / 1.5
-		self.position.y -= capacity / 1.5
+		self.position.x += speed / 1.5
+		self.position.y -= speed / 1.5
 	elif Input.is_action_pressed("right") and Input.is_action_pressed('down'):
 		cur_dir = "right"
 		play_anim(1)
-		self.position.x += capacity / 1.5
-		self.position.y += capacity / 1.5
+		self.position.x += speed / 1.5
+		self.position.y += speed / 1.5
 	elif Input.is_action_pressed('up'):
 		cur_dir = "up"
 		play_anim(1)
-		self.position.y -= capacity
+		self.position.y -= speed
 	elif Input.is_action_pressed('down'):
 		cur_dir = "down"
 		play_anim(1)
-		self.position.y += capacity
+		self.position.y += speed
 	elif Input.is_action_pressed('left'):
 		cur_dir = "left"
 		play_anim(1)
-		self.position.x -= capacity
+		self.position.x -= speed
 	elif Input.is_action_pressed('right'):
 		cur_dir = "right"
 		play_anim(1)
-		self.position.x += capacity
+		self.position.x += speed
 	else:
 		play_anim(0)
 		
