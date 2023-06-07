@@ -1,0 +1,346 @@
+[gd_scene load_steps=15 format=3 uid="uid://dapxcabajsdyc"]
+
+[ext_resource type="Script" path="res://scripts/settings.gd" id="1_13tq1"]
+[ext_resource type="Texture2D" uid="uid://tw2n7gp0kufl" path="res://button/Ресурс 5@0.5x.png" id="1_d75pu"]
+[ext_resource type="Texture2D" uid="uid://bwo10k2mf516t" path="res://button/1x/0.5x/Ресурс 5@0.5x.png" id="2_47bcw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wiwyd"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.0196078, 0.0901961, 0.0470588, 0.976471)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f5bbv"]
+bg_color = Color(0.552941, 0.556863, 0.901961, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.990041, 0.134756, 0.0948522, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 1
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4qcbt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lc0tf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qa4yu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g2akn"]
+content_margin_left = 7.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mj8vb"]
+content_margin_left = 7.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kuqnx"]
+content_margin_left = 7.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ysrp6"]
+content_margin_left = 7.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xapje"]
+content_margin_left = 7.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4aga2"]
+content_margin_left = 7.0
+
+[node name="Settings" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -385.0
+offset_top = -219.5
+offset_right = 385.0
+offset_bottom = 219.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+script = ExtResource("1_13tq1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(661.667, 362.5)
+scale = Vector2(1.00686, 1.14351)
+texture = ExtResource("1_d75pu")
+
+[node name="Option" type="Control" parent="Sprite2D"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -474.0
+offset_top = -367.0
+offset_right = -474.0
+offset_bottom = -367.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.7, 2.7)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Sprite2D/Option"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Video" type="Button" parent="Sprite2D/Option/VBoxContainer"]
+custom_minimum_size = Vector2(210, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_wiwyd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_f5bbv")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4qcbt")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_lc0tf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qa4yu")
+text = "Video
+"
+
+[node name="Audio" type="Button" parent="Sprite2D/Option/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_wiwyd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_f5bbv")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4qcbt")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_lc0tf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qa4yu")
+text = "Audio"
+
+[node name="Back" type="Button" parent="Sprite2D/Option"]
+offset_left = 103.611
+offset_top = 99.8661
+offset_right = 177.611
+offset_bottom = 173.866
+scale = Vector2(0.7, 0.7)
+icon = ExtResource("2_47bcw")
+flat = true
+
+[node name="Video" type="Control" parent="Sprite2D"]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -474.0
+offset_top = -367.0
+offset_right = -474.0
+offset_bottom = -367.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Sprite2D/Video"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -46.0
+offset_right = 64.0
+offset_bottom = 46.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Labels" type="VBoxContainer" parent="Sprite2D/Video/HBoxContainer"]
+layout_mode = 2
+
+[node name="FullScreen" type="Label" parent="Sprite2D/Video/HBoxContainer/Labels"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "FullScreen"
+
+[node name="Borderless" type="Label" parent="Sprite2D/Video/HBoxContainer/Labels"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Borderless"
+
+[node name="VSync" type="Label" parent="Sprite2D/Video/HBoxContainer/Labels"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "VSync"
+
+[node name="Checks" type="VBoxContainer" parent="Sprite2D/Video/HBoxContainer"]
+layout_mode = 2
+
+[node name="FullScreen" type="CheckBox" parent="Sprite2D/Video/HBoxContainer/Checks"]
+custom_minimum_size = Vector2(30, 38)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g2akn")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_mj8vb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_kuqnx")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ysrp6")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_xapje")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4aga2")
+
+[node name="Borderless" type="CheckBox" parent="Sprite2D/Video/HBoxContainer/Checks"]
+custom_minimum_size = Vector2(30, 38)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g2akn")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_mj8vb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_kuqnx")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ysrp6")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_xapje")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4aga2")
+
+[node name="VSync" type="CheckBox" parent="Sprite2D/Video/HBoxContainer/Checks"]
+custom_minimum_size = Vector2(30, 38)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g2akn")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_mj8vb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_kuqnx")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ysrp6")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_xapje")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4aga2")
+
+[node name="Back_op1" type="Button" parent="Sprite2D/Video"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.257
+anchor_top = 0.246
+anchor_right = 0.257
+anchor_bottom = 0.246
+offset_left = 136.564
+offset_top = 126.074
+offset_right = 210.564
+offset_bottom = 200.074
+icon = ExtResource("2_47bcw")
+flat = true
+
+[node name="Audio" type="Control" parent="Sprite2D"]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -474.0
+offset_top = -367.0
+offset_right = -474.0
+offset_bottom = -367.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Sprite2D/Audio"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -146.0
+offset_top = -47.0
+offset_right = 141.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Labels" type="VBoxContainer" parent="Sprite2D/Audio/HBoxContainer"]
+layout_mode = 2
+
+[node name="Master" type="Label" parent="Sprite2D/Audio/HBoxContainer/Labels"]
+custom_minimum_size = Vector2(115, 20)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Master"
+
+[node name="Music" type="Label" parent="Sprite2D/Audio/HBoxContainer/Labels"]
+custom_minimum_size = Vector2(115, 20)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Music"
+
+[node name="Sound Fx" type="Label" parent="Sprite2D/Audio/HBoxContainer/Labels"]
+custom_minimum_size = Vector2(115, 20)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Sound Fx"
+
+[node name="Sliders" type="VBoxContainer" parent="Sprite2D/Audio/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Master" type="HSlider" parent="Sprite2D/Audio/HBoxContainer/Sliders"]
+custom_minimum_size = Vector2(0, 37)
+layout_mode = 2
+min_value = -50.0
+max_value = 2.1
+step = 0.5
+value = 2.0
+
+[node name="Music" type="HSlider" parent="Sprite2D/Audio/HBoxContainer/Sliders"]
+custom_minimum_size = Vector2(0, 37)
+layout_mode = 2
+min_value = -50.0
+max_value = 2.1
+step = 0.5
+value = 2.1
+
+[node name="Sound Fx" type="HSlider" parent="Sprite2D/Audio/HBoxContainer/Sliders"]
+custom_minimum_size = Vector2(0, 37)
+layout_mode = 2
+min_value = -50.0
+max_value = 2.1
+step = 0.5
+value = 2.1
+
+[node name="Back_0p2" type="Button" parent="Sprite2D/Audio"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.257
+anchor_top = 0.246
+anchor_right = 0.257
+anchor_bottom = 0.246
+offset_left = 139.047
+offset_top = 127.532
+offset_right = 213.047
+offset_bottom = 201.532
+icon = ExtResource("2_47bcw")
+flat = true
+
+[connection signal="pressed" from="Sprite2D/Option/VBoxContainer/Video" to="." method="_on_video_pressed"]
+[connection signal="pressed" from="Sprite2D/Option/VBoxContainer/Audio" to="." method="_on_audio_pressed"]
+[connection signal="pressed" from="Sprite2D/Option/Back" to="." method="_on_back_pressed"]
+[connection signal="toggled" from="Sprite2D/Video/HBoxContainer/Checks/FullScreen" to="." method="_on_full_screen_toggled"]
+[connection signal="toggled" from="Sprite2D/Video/HBoxContainer/Checks/Borderless" to="." method="_on_borderless_toggled"]
+[connection signal="toggled" from="Sprite2D/Video/HBoxContainer/Checks/VSync" to="." method="_on_v_sync_toggled"]
+[connection signal="pressed" from="Sprite2D/Video/Back_op1" to="." method="_on_back_op_1_pressed"]
+[connection signal="value_changed" from="Sprite2D/Audio/HBoxContainer/Sliders/Master" to="." method="_on_master_value_changed"]
+[connection signal="value_changed" from="Sprite2D/Audio/HBoxContainer/Sliders/Music" to="." method="_on_music_value_changed"]
+[connection signal="value_changed" from="Sprite2D/Audio/HBoxContainer/Sliders/Sound Fx" to="." method="_on_sound_fx_value_changed"]
+[connection signal="pressed" from="Sprite2D/Audio/Back_0p2" to="." method="_on_back_0p_2_pressed"]

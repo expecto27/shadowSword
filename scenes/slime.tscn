@@ -1,9 +1,8 @@
-[gd_scene load_steps=28 format=3 uid="uid://cxsy8inhl10r"]
+[gd_scene load_steps=27 format=3 uid="uid://cxsy8inhl10r"]
 
 [ext_resource type="Texture2D" uid="uid://c2357kvox5mai" path="res://button/sprites/characters/slime.png" id="1_dawsd"]
 [ext_resource type="Script" path="res://scripts/slime.gd" id="1_n6gq3"]
 [ext_resource type="Texture2D" uid="uid://b0apejjnm08ls" path="res://assets/hp/SeekPng.com_health-bar-png_1087967.png" id="3_q48yb"]
-[ext_resource type="AudioStream" uid="uid://der5ed12dk4nh" path="res://sounds/slimejump-6913.mp3" id="4_x6mde"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sau61"]
 atlas = ExtResource("1_dawsd")
@@ -211,9 +210,6 @@ scale = Vector2(0.15, 0.15)
 theme_override_styles/background = SubResource("StyleBoxTexture_68q65")
 max_value = 70.0
 show_percentage = false
-
-[node name="slimejump" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_x6mde")
 
 [node name="son" type="Timer" parent="."]
 wait_time = 0.7

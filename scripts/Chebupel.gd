@@ -119,7 +119,7 @@ func _on_hit_box_body_exited(body):
 
 func enemy_attack():
 	if enemy_attack_range and enemy_attack_cooldown == true:
-		$damage.playing = true
+		SongsEff.get_node("damage").play()
 		$plrig.modulate = Color(1,0,0,1)
 		hp -= 5
 		enemy_attack_cooldown = false
@@ -140,22 +140,22 @@ func attack():
 			get_node("plrig").set_flip_h(false)
 			anim.play("att_r")
 			$deal_att.start()
-			$swordslash.playing = true
+			SongsEff.get_node("swordslash").play()
 		if dir == "left":
 			get_node("plrig").set_flip_h(true)
 			anim.play("att_r")
 			$deal_att.start()
-			$swordslash.playing = true
+			SongsEff.get_node("swordslash").play()
 		if dir == "down":
 			get_node("plrig").set_flip_h(false)
 			anim.play("att_d")
 			$deal_att.start()
-			$swordslash.playing = true
+			SongsEff.get_node("swordslash").play()
 		if dir == "up":
 			get_node("plrig").set_flip_h(false)
 			anim.play("att_u")
 			$deal_att.start()
-			$swordslash.playing = true
+			SongsEff.get_node("swordslash").play()
 
 func _on_deal_att_timeout():
 	$deal_att.stop()
@@ -170,6 +170,7 @@ func update_hp():
 		hpbar.visible = false
 	else:
 		hpbar.visible = true
+		
 
 
 func _on_regen_timeout():

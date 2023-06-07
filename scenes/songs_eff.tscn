@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdelgvasqe73v"]
+
+[ext_resource type="AudioStream" uid="uid://der5ed12dk4nh" path="res://sounds/slimejump-6913.mp3" id="1_2xqjb"]
+[ext_resource type="AudioStream" uid="uid://dt7lkxvylgycy" path="res://sounds/slash-21834.mp3" id="2_a22mf"]
+[ext_resource type="AudioStream" uid="uid://bojnfvybex8l7" path="res://sounds/Sound_17948400 1634388100.mp3" id="3_805kk"]
+
+[node name="Songs_eff" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="slimejump" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_2xqjb")
+bus = &"Sounds FX"
+
+[node name="swordslash" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_a22mf")
+bus = &"Sounds FX"
+
+[node name="damage" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_805kk")
+bus = &"Sounds FX"

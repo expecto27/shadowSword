@@ -27,7 +27,7 @@ func _physics_process(delta):
 
 func _on_detect_body_entered(body):
 	chebupel = body
-	$slimejump.playing = true
+	SongsEff.get_node("slimejump").play()
 	$son.start()
 	chebupel_chase = true
 
@@ -77,4 +77,4 @@ func update_hp():
 
 
 func _on_son_timeout():
-	$slimejump.playing = true
+	SongsEff.get_node("slimejump").play()
